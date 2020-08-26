@@ -120,7 +120,7 @@ class sf(object):
                 
     
     def _get_cell_id_from_ijk(self,i,j=None,k=None):        
-        raise NotImplementedError("Cell type does not hav an ijk mapping yet.")
+        raise NotImplementedError("Cell type does not have an ijk mapping yet.")
 
     def write_yaml(self,file,write_mode,mesh_name,mesh_type=None,fmt='yt'):
         """writes element info, including shape functions to a yaml file. 
