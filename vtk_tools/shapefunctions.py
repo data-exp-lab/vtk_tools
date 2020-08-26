@@ -35,6 +35,7 @@ class sf(object):
             setattr(self,attr_name,getattr(self.cell,meth)())
 
         self.node_order_hash = self._build_point_hash()
+        self.node_coords = self._get_node_coords()
         self.shape_functions = self._build_shape_funcs()        
         
     def _build_point_hash(self):
@@ -117,6 +118,13 @@ class sf(object):
             pos_k = np.linspace(-1,1,order_k+1).tolist()
             
         return pos_i,pos_j,pos_k
+        
+    def _get_node_coords(self):
+        pos_i,pos_j,pos_k = self._get_ijk_positions(*self.element_order)         
+        I_i,J_j,K_k = np.meshgrid(pos_i,pos_j,pos_k,indexing='ij')
+        coords = np.column_stack((I_i.ravel(),J_j.ravel(),K_k.ravel()))
+        
+        return coords
                 
     
     def _get_cell_id_from_ijk(self,i,j=None,k=None):        

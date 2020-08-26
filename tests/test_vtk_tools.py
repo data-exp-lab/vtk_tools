@@ -9,6 +9,8 @@ b = sfs.sf(72,1)
 print(b.node_order_hash)
 print("\nhex8 node hash:")
 print(b.node_order_hash)
+print("parent element coords:")
+print(b.node_coords)
 
 b = sfs.sf(72,[2,2,2])
 print("\nhex27 node hash:")
