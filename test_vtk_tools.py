@@ -6,6 +6,7 @@ v_cell,_ = init_vtk_cell(28)
 print(type(v_cell))
 
 b = sfs.sf(72,1)
+print(b.node_order_hash)
 print("\nhex8 node hash:")
 print(b.node_order_hash)
 
