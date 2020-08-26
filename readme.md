@@ -6,15 +6,13 @@ Note that a major limitation at present is that the package's shape function met
 
 ## installation 
 
-none yet.... 
+[Awaiting package details]
+
+To install from source, clone or download the repository and use  `pip install .` or `pip install -e .`
 
 ## requirements 
 
-While `setup.py` (doesn't exist yet) contains requirements, it is important to stress that this package requires vtk version of `9.0.1` or later. At present, the latest vtk version on conda is 8.2, so if you already have installed vtk from conda (or from source), you will need to upgrade. The easiest way is to use pip: 
-
-`pip install vtk`
-
-If you already have a vtk version installed, you can try `pip install vtk -upgrade` but this will likely fail if the previous version of vtk was not installed with pip, in which case the previous version must be uninstalled frist. 
+Check `setup.py` for requirements, but it is important to stress that this package requires vtk version of `9.0.1` or later. If you have already installed vtk using pip, vtk will be upgraded during installation of `vtk_tools`. If you have already installed vtk from conda (or from source), you will likely need to uninstall `vtk` first. 
 
 Also, note that while this package requires vtk `9.0.1` or later, it can process output that was created with lower vtk versions.
 
